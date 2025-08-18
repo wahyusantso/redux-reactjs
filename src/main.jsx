@@ -21,7 +21,13 @@ createRoot(document.getElementById('root')).render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />}/>
-          <Route path="/counter" element={<Counter />}/>
+          <Route path="/counter" element={
+            <>
+              {/* cek global state, jika mengubah nilai di satu component seharusnya nilai di state lain juga berubah. */}
+              <Counter />
+              <Counter />
+            </>
+          }/>
         </Routes>
       </BrowserRouter>
     </Provider>
