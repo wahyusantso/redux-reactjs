@@ -20,6 +20,11 @@ const store = configureStore({
   }
 });
 
+
+/**
+ * penggunaan global state untuk banyak component: get, add, update, remove.
+ */
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider store={store}>
